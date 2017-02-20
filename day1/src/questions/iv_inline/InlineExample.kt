@@ -9,6 +9,11 @@ fun main(args: Array<String>) {
     val result = list.filter { it > 0 }
 
     /*
+    val destination = ArrayList<T>()
+    for (element in this) {
+        if (element > 0) destination.add(element)
+    }
+    result = destination
     */
 }
 
