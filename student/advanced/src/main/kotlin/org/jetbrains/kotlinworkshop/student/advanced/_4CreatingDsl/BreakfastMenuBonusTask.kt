@@ -12,10 +12,10 @@ fun createErroneousMenu() = breakfastMenu {
         calories = 650
 
         // using "item" shouldn't compile
-        item {
-            name = "Strawberry Belgian Waffles"
-            price = 7.95
-            calories = 900
-        }
+//        item {
+//            name = "Strawberry Belgian Waffles"
+//            price = 7.95
+//            calories = 900
+//        }
     }
 }
