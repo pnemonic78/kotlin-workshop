@@ -19,3 +19,21 @@ fun MyDate.addTimeIntervals(timeInterval: TimeInterval, number: Int): MyDate {
     result.timeInMillis = timeInMillis
     return MyDate(result.get(Calendar.YEAR), result.get(Calendar.MONTH), result.get(Calendar.DATE))
 }
+
+operator fun MyDate.compareTo(other: MyDate): Int {
+    val y1 = this.year
+    val y2 = other.year
+    var c = y1 - y2
+    if (c != 0) return c
+
+    val m1 = this.month
+    val m2 = other.month
+    c = m1 - m2
+    if (c != 0) return c
+
+    return this.dayOfMonth - other.dayOfMonth
+}
+
+operator fun DateRange.contains(date: MyDate): Boolean {
+    return (this.start <= date) && (date <= this.endInclusive)
+}

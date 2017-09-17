@@ -9,8 +9,7 @@ fun task1(date1: MyDate, date2: MyDate): Boolean {
 }
 
 fun task2(date: MyDate, first: MyDate, last: MyDate): Boolean {
-    TODO()
-//    return date in DateRange(first, last)
+    return date in DateRange(first, last)
 }
 
 fun task3(date: MyDate, first: MyDate, last: MyDate): Boolean {
