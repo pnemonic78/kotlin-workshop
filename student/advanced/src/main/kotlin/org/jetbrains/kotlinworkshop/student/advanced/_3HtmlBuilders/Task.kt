@@ -14,6 +14,7 @@ fun renderProductTable(): String {
     return html {
         table {
             tr {
+                attributes.add(Attribute("bgcolor", getTitleColor()))
                 td {
                     text("Product")
                 }
@@ -25,16 +26,19 @@ fun renderProductTable(): String {
                 }
             }
             val products = getProducts()
-            products.map {
+            products.mapIndexed { index, product ->
                 tr {
                     td {
-                        text(it.description)
+                        attributes.add(Attribute("bgcolor", getCellColor(index, 0)))
+                        text(product.description)
                     }
                     td {
-                        text(it.price)
+                        attributes.add(Attribute("bgcolor", getCellColor(index, 1)))
+                        text(product.price)
                     }
                     td {
-                        text(it.popularity)
+                        attributes.add(Attribute("bgcolor", getCellColor(index, 2)))
+                        text(product.popularity)
                     }
                 }
             }
