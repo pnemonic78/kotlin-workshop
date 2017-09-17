@@ -3,7 +3,9 @@ package org.jetbrains.kotlinworkshop.student.advanced._1BreakingSafety
 /* optional task */
 
 open class A(open val value: String) {
-
+    init {
+        mightThrowNPE()
+    }
 }
 
 class B(override val value: String) : A(value)
