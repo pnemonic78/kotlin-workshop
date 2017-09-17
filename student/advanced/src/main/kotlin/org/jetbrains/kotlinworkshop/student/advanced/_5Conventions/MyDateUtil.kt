@@ -34,6 +34,8 @@ operator fun MyDate.compareTo(other: MyDate): Int {
     return this.dayOfMonth - other.dayOfMonth
 }
 
-operator fun DateRange.contains(date: MyDate): Boolean {
-    return (this.start <= date) && (date <= this.endInclusive)
-}
+operator fun DateRange.contains(date: MyDate): Boolean =
+        (start <= date) && (date <= endInclusive)
+
+operator fun MyDate.plus(timeInterval: TimeInterval): MyDate =
+        addTimeIntervals(timeInterval, 1)
