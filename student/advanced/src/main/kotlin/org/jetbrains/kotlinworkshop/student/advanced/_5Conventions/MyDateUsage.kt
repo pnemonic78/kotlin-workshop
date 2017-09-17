@@ -13,8 +13,7 @@ fun task2(date: MyDate, first: MyDate, last: MyDate): Boolean {
 }
 
 fun task3(date: MyDate, first: MyDate, last: MyDate): Boolean {
-    TODO()
-//    return date in first..last
+    return date in first..last
 }
 
 fun task4(today: MyDate): MyDate {
