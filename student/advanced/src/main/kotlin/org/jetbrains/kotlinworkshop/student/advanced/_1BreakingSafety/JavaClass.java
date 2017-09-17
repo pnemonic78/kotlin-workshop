@@ -6,7 +6,7 @@ import java.util.List;
 
 public class JavaClass {
     public String getValue() {
-        throw new NotImplementedException();
+        throw new NullPointerException();
     }
 
     public static void dangerousJavaMethod(List<Integer> list) {
