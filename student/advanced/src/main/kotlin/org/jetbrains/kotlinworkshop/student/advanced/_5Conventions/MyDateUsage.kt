@@ -1,7 +1,6 @@
 package org.jetbrains.kotlinworkshop.student.advanced._5Conventions
 
-import org.jetbrains.kotlinworkshop.student.advanced._5Conventions.TimeInterval.WEEK
-import org.jetbrains.kotlinworkshop.student.advanced._5Conventions.TimeInterval.YEAR
+import org.jetbrains.kotlinworkshop.student.advanced._5Conventions.TimeInterval.*
 
 /*
 Task: Uncomment the commented code and make it compile by changing the MyDate class.
@@ -24,6 +23,5 @@ fun task4(today: MyDate): MyDate {
 }
 
 fun task5(today: MyDate): MyDate {
-    TODO()
-//    return today + YEAR * 2 + WEEK * 3 + DAY * 5
+    return today + YEAR * 2 + WEEK * 3 + DAY * 5
 }

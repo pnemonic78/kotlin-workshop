@@ -39,3 +39,11 @@ operator fun DateRange.contains(date: MyDate): Boolean =
 
 operator fun MyDate.plus(timeInterval: TimeInterval): MyDate =
         addTimeIntervals(timeInterval, 1)
+
+class DateOperator(val timeInterval: TimeInterval, val number: Int)
+
+operator fun TimeInterval.times(number: Int): DateOperator =
+        DateOperator(this, number)
+
+operator fun MyDate.plus(intervals: DateOperator): MyDate =
+        addTimeIntervals(intervals.timeInterval, intervals.number)
