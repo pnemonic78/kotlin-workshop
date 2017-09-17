@@ -25,16 +25,16 @@ fun renderProductTable(): String {
                 }
             }
             val products = getProducts()
-            for (product in products) {
+            products.map {
                 tr {
                     td {
-                        text(product.description)
+                        text(it.description)
                     }
                     td {
-                        text(product.price)
+                        text(it.price)
                     }
                     td {
-                        text(product.popularity)
+                        text(it.popularity)
                     }
                 }
             }
