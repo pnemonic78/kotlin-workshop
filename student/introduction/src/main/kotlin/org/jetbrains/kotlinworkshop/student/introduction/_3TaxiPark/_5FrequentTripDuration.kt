@@ -4,7 +4,7 @@ package org.jetbrains.kotlinworkshop.student.introduction._3TaxiPark
 // among 0-9 minutes, 10-19 minutes, 20-29 minutes etc.
 // If there's no duration info, return empty list.
 fun TaxiPark.findTheMostFrequentTripDurations(): List<IntRange> {
-    val perDuration = orders.groupBy { it.duration / 10 }
-    val most = perDuration.maxBy { it.value.size }?.value?.size
-    return perDuration.filterValues { it.size == most }.keys.map { it * 10 }.map { it.rangeTo(it + 9) }
+    val orderPerDuration = orders.groupBy { it.duration / 10 }
+    val most = orderPerDuration.maxBy { it.value.size }?.value?.size
+    return orderPerDuration.filterValues { it.size == most }.keys.map { it * 10 }.map { it.rangeTo(it + 9) }
 }
