@@ -25,7 +25,19 @@ fun renderProductTable(): String {
                 }
             }
             val products = getProducts()
-
+            for (product in products) {
+                tr {
+                    td {
+                        text(product.description)
+                    }
+                    td {
+                        text(product.price)
+                    }
+                    td {
+                        text(product.popularity)
+                    }
+                }
+            }
         }
     }.toString()
 }
