@@ -6,7 +6,5 @@ package org.jetbrains.kotlinworkshop.student.introduction._3TaxiPark
 fun TaxiPark.findTheMostFrequentTripDurations(): List<IntRange> {
     val perDuration = orders.groupBy { it.duration / 10 }
     val most = perDuration.maxBy { it.value.size }?.value?.size
-    val frequent = perDuration.filterValues { it.size == most }
-    val durations = frequent.keys.map { it * 10 }
-    return durations.map { it.rangeTo(it + 9) }
+    return perDuration.filterValues { it.size == most }.keys.map { it * 10 }.map { it.rangeTo(it + 9) }
 }
