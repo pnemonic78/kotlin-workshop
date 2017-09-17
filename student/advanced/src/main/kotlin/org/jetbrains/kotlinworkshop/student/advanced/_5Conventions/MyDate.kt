@@ -11,3 +11,17 @@ enum class TimeInterval {
     WEEK,
     YEAR
 }
+
+operator fun MyDate.compareTo(other: MyDate): Int {
+    val y1 = this.year
+    val y2 = other.year
+    var c = y1 - y2
+    if (c != 0) return c
+
+    val m1 = this.month
+    val m2 = other.month
+    c = m1 - m2
+    if (c != 0) return c
+
+    return this.dayOfMonth - other.dayOfMonth
+}

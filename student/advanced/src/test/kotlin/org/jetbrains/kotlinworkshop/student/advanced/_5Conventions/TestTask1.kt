@@ -19,6 +19,4 @@ class TestTask1 {
         val second = MyDate(2014, 7, 11)
         assertTrue(first > second, "The date ${first.s} should be after ${second.s}")
     }
-
-    operator fun MyDate.compareTo(other: MyDate): Int = TODO("This function shouldn't be called if MyDate implements 'Comparable<MyDate>'")
 }

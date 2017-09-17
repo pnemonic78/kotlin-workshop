@@ -5,8 +5,7 @@ Task: Uncomment the commented code and make it compile by changing the MyDate cl
  */
 
 fun task1(date1: MyDate, date2: MyDate): Boolean {
-    TODO()
-//    return date1 < date2
+    return date1 < date2
 }
 
 fun task2(date: MyDate, first: MyDate, last: MyDate): Boolean {
