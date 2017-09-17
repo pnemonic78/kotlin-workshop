@@ -11,10 +11,13 @@ class BreakfastMenu {
 }
 
 fun BreakfastMenu.item(init: BreakfastMenuItem.() -> Unit) {
-    TODO("Create new menu item, initialize it and add it to the 'items' list")
+    val item = BreakfastMenuItem()
+    item.init()
+    items.add(item)
 }
 
 fun breakfastMenu(init: BreakfastMenu.() -> Unit): BreakfastMenu {
-    TODO("Create new BreakfastMenu and initialize it. All the items are added by 'init'.")
-    // bonus: use the 'apply' function
+    return BreakfastMenu().apply {
+        init()
+    }
 }
